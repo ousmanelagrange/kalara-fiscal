@@ -1,0 +1,94 @@
+/* ===============================
+   Tailwind base directives
+   =============================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   Design system: couleurs, gradients, fonts
+   =============================== */
+@layer base {
+  :root {
+    /* Couleurs principales */
+    --background: 0 0% 100%;
+    --foreground: 160 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 20% 15%;
+
+    --primary: 158 64% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 158 64% 92%;
+    --primary-glow: 158 64% 52%;
+
+    --secondary: 45 93% 47%;
+    --secondary-foreground: 160 20% 15%;
+    --secondary-light: 45 93% 95%;
+
+    --muted: 160 10% 96%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 160 20% 15%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 95%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 160 20% 15%;
+    --warning-light: 38 92% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 95%;
+
+    /* Bordures, inputs, rayons */
+    --border: 160 20% 90%;
+    --input: 160 20% 90%;
+    --ring: 158 64% 40%;
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 40%), hsl(158 64% 52%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 93% 47%), hsl(38 92% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(158 64% 40%) 0%, hsl(45 93% 47%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(160 10% 98%));
+
+    /* Ombres */
+    --shadow-sm: 0 1px 2px 0 hsl(160 20% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(160 20% 15% / 0.1), 0 2px 4px -1px hsl(160 20% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(160 20% 15% / 0.1), 0 4px 6px -2px hsl(160 20% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(160 20% 15% / 0.1), 0 10px 10px -5px hsl(160 20% 15% / 0.04);
+    --shadow-glow: 0 0 40px hsl(158 64% 52% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Mode sombre */
+  .dark {
+    --background: 160 20% 8%;
+    --foreground: 0 0% 98%;
+    --border: 160 20% 20%;
+    --ring: 158 64% 52%;
+    --primary: 158 64% 52%;
+    --primary-foreground: 160 20% 8%;
+    --secondary: 45 93% 55%;
+    --muted: 160 20% 15%;
+  }
+
+  /* Appliquer les classes personnalisées globalement */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
