@@ -15,6 +15,5 @@ export default defineConfig({
     },
   },
   preview: {
-    allowedHosts: "all", // Autorise toutes les requêtes depuis n'importe quel hôte
-  },
+    allowedHosts: ["kalara-fiscal-declaration-proto.onrender.com"],  },
 });
